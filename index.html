@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Interactive card details form</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main>
+			<section class="display-section">
+				<div class="card-container">
+					<div class="card-back card">
+						<img class="card-img" src="./images/bg-card-back.png" alt="" />
+						<p class="cvv"></p>
+					</div>
+					<div class="card-front card">
+						<img class="card-img" src="./images/bg-card-front.png" alt="" />
+						<img class="card-logo" src="./images/card-logo.svg" alt="" />
+						<p class="card-num">
+							<!-- <span class="card-four">0000</span
+							><span class="card-four">0000</span
+							><span class="card-four">0000</span
+							><span class="card-four">0000</span> -->
+						</p>
+						<div class="card-details">
+							<p class="card-name"></p>
+							<p class="card-exp">
+								<span class="exp-mon"></span>/<span class="exp-yr"></span>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ! INPUT SECTION-->
+			<section class="input-section">
+				<form action="" class="input-form">
+					<label for="name">Cardholder name</label>
+					<input
+						class="name"
+						type="text"
+						id="name"
+						placeholder="e.g. Jane Appleseed"
+					/>
+					<label for="card-number">Card Number</label>
+					<input
+						class="card-number"
+						type="text"
+						id="card-number"
+						maxlength="19"
+						placeholder="e.g. 1234 5678 9123 0000"
+					/>
+					<p class="card-num-err cn-txt">Wrong format, numbers only</p>
+					<div class="inline">
+						<div class="date-details">
+							<label for="exp-date">
+								exp. date (mm/yy)
+								<input
+									type="text"
+									class="date date-month"
+									placeholder="MM"
+									maxlength="2"
+								/>
+								<input
+									type="text"
+									class="date date-year"
+									placeholder="YY"
+									maxlength="2"
+								/>
+								<p class="date-err cn-txt">Can't be blank</p>
+							</label>
+						</div>
+						<div class="cvc-div">
+							<label for="cvc">cvc</label>
+							<input
+								class="cvc-box"
+								type="tel"
+								placeholder="e.g. 123"
+								maxlength="3"
+							/>
+							<p class="cvc-err cn-txt">Can't be blank</p>
+						</div>
+					</div>
+					<button class="confirm btn" type="submit">Confirm</button>
+				</form>
+				<!-- ! COMPLETED SECTION-->
+
+				<section class="completed-state hidden">
+					<div class="container">
+						<img class="good" src="./images/icon-complete.svg" alt="" />
+						<h2>THANK YOU!</h2>
+						<p>We've added your card details</p>
+						<button class="continue btn">Continue</button>
+					</div>
+				</section>
+			</section>
+		</main>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="https://linktr.ee/didiauche">Didia Uchenna</a>.
+		</div>
+		<script src="app.js"></script>
+	</body>
+</html>

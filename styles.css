@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+}
+
+:root {
+	font-size: 62.5%;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 500;
+
+	--Linear-gradient: hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+	--Red: hsl(0, 80%, 66%);
+
+	--White: hsl(0, 0%, 100%);
+	--Light-grayish-violet: hsl(270, 3%, 87%);
+	--Dark-grayish-violet: hsl(279, 6%, 55%);
+	--Very-dark-violet: hsl(278, 68%, 11%);
+	--light-purple: hsl(249, 39%, 60%);
+}
+
+img {
+	display: block;
+}
+
+.display-section {
+	background: url(./images/bg-main-mobile.png);
+	position: relative;
+	padding: 2rem 3rem;
+	margin-bottom: 10rem;
+	height: 22rem;
+}
+
+.input-section {
+	margin: 0 auto;
+	max-width: 40rem;
+}
+
+.card-container {
+	max-width: 35rem;
+	margin: 0 auto;
+}
+
+.input-form {
+	margin: 3rem auto;
+}
+
+.card {
+	position: relative;
+	margin-bottom: 3rem;
+	width: 28rem;
+}
+
+.card .card-img {
+	position: relative;
+	width: 100%;
+}
+
+.card-back {
+	left: 4.5rem;
+}
+
+.cvv {
+	position: absolute;
+	color: var(--Light-grayish-violet);
+	top: 6.9rem;
+	right: 4rem;
+}
+
+.card-front {
+	bottom: 9.6rem;
+	left: -1.5rem;
+}
+
+.card-logo {
+	width: 5rem;
+	top: 1.5rem;
+	left: 1.5rem;
+	position: absolute;
+}
+
+.card-num {
+	position: absolute;
+	color: var(--White);
+	font-size: 1.8rem;
+	letter-spacing: 0.17rem;
+	left: 2rem;
+	top: 7.5rem;
+}
+
+.card-details {
+	position: absolute;
+	width: 85%;
+	display: flex;
+	font-size: 1rem;
+	justify-content: space-between;
+	color: var(--White);
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 1.9rem;
+	font-weight: 700;
+}
+
+.card-name {
+	text-transform: uppercase;
+}
+
+.input-section {
+	margin-top: -4rem;
+	padding: 2.5rem;
+}
+
+label {
+	text-transform: uppercase;
+	color: var(--Very-dark-violet);
+	display: block;
+	margin-bottom: 1rem;
+	letter-spacing: 0.15rem;
+	font-weight: 700;
+}
+
+.inline {
+	display: flex;
+	justify-content: space-between;
+}
+
+input {
+	margin-bottom: 1.5rem;
+	border-radius: 0.7rem;
+	height: 5rem;
+	border: 2px solid var(--Light-grayish-violet);
+	padding: 1.5rem;
+	cursor: pointer;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 700;
+	font-size: 1.9rem;
+	outline-color: var(--light-purple);
+}
+
+input::placeholder {
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 900;
+	color: var(--Dark-grayish-violet);
+	font-size: 1.9rem;
+}
+
+.cn-txt {
+	display: none;
+	color: var(--Red);
+	text-transform: initial;
+	font-weight: 600;
+	position: relative;
+	font-size: 1.2rem;
+	letter-spacing: initial;
+	top: -1rem;
+}
+
+.cn-txt-err {
+	display: block;
+}
+
+.cn-err {
+	border-color: var(--Red);
+	outline-color: var(--Red);
+}
+
+.name,
+.card-number {
+	width: 100%;
+}
+
+.date {
+	display: inline;
+	margin-right: 0.3rem;
+	margin-top: 1rem;
+	width: 8rem;
+}
+
+.btn {
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	height: 5rem;
+	border: none;
+	border-radius: 1rem;
+	font-family: "Space Grotesk", sans-serif;
+	font-weight: 700;
+	font-size: 1.5rem;
+	color: var(--Light-grayish-violet);
+	background-color: var(--Very-dark-violet);
+}
+
+.container img {
+	margin: 0 auto 3rem;
+}
+
+.container h2 {
+	text-align: center;
+	font-size: 2.5rem;
+	letter-spacing: 0.2rem;
+	margin-bottom: 2rem;
+}
+
+.container p {
+	text-align: center;
+	font-size: 1.5rem;
+	margin-bottom: 3rem;
+	font-weight: 700;
+	color: var(--Dark-grayish-violet);
+}
+
+.cvc-div input {
+	width: 16.5rem;
+}
+
+.hidden {
+	display: none;
+}
+
+@media screen and (max-width: 325px) {
+	.card-back {
+		left: unset;
+	}
+
+	.cvc-div input {
+		width: 13rem;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	main {
+		display: flex;
+		height: 100%;
+	}
+
+	.display-section {
+		background: url(./images/bg-main-desktop.png);
+		position: relative;
+		padding: 0;
+		margin-bottom: unset;
+		height: 100%;
+		width: 45rem;
+	}
+
+	.card-container {
+		max-width: 35rem;
+		margin: 0 auto;
+	}
+
+	.input-form {
+		margin: unset;
+	}
+
+	.card {
+		position: relative;
+		margin-bottom: 0;
+		width: 40rem;
+	}
+
+	.card .card-img {
+		position: relative;
+		width: 100%;
+	}
+
+	.card-back {
+		left: 20rem;
+		bottom: -40rem;
+	}
+
+	.cvv {
+		position: absolute;
+		color: var(--Light-grayish-violet);
+		top: 9.7rem;
+		right: 4.9rem;
+		font-weight: 700;
+		font-size: 1.6rem;
+	}
+
+	.card-front {
+		bottom: 9rem;
+		left: 10rem;
+	}
+
+	.card-logo {
+		width: 6rem;
+		top: 3rem;
+		left: 3rem;
+		position: absolute;
+	}
+
+	.card-num {
+		position: absolute;
+		color: var(--White);
+		font-size: 2.5rem;
+		letter-spacing: 0.17rem;
+		left: 4rem;
+		top: 11rem;
+	}
+
+	.card-details {
+		position: absolute;
+		width: 85%;
+		display: flex;
+		font-size: 1.5rem;
+		justify-content: space-between;
+		color: var(--White);
+		left: 50%;
+		transform: translate(-50%);
+		bottom: 1.9rem;
+		padding: 0 1rem 0 0;
+	}
+
+	.card-name {
+		text-transform: uppercase;
+	}
+
+	.input-section {
+		display: flex;
+		align-items: center;
+		margin-top: 0;
+		padding: 2.5rem;
+	}
+
+	.container {
+		width: 37rem;
+	}
+}
+
+.attribution {
+	font-size: 1.4rem;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
