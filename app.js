@@ -117,9 +117,11 @@ numInput.addEventListener("keyup", () => {
 		numInputVal = `0000 0000 0000 0000`;
 		cardNum.textContent = numInputVal;
 	} else {
-		numInputVal = numInput.value;
+		umInput.value;
 		cardNum.textContent = numInputVal;
 	}
+
+	s;
 });
 
 // ! CARD NUMBER
