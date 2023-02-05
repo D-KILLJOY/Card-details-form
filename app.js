@@ -53,9 +53,17 @@ let inputFormPage = completed.classList.contains("hidden");
 confirmBtn.addEventListener("click", (event) => {
 	event.preventDefault();
 	//! ADD A FUNCTION THAT RUNS THE CODE BELOW ONLY IF THE FORM IS CORRECT
-	if (inputFormPage) {
-		completed.classList.remove("hidden");
-		inputForm.classList.add("hidden");
+	checkForErr();
+
+	if (
+		nameInput.value !== "" &&
+		cvvInput.value !== "" &&
+		cvvInput.value.length === 3
+	) {
+		if (inputFormPage) {
+			completed.classList.remove("hidden");
+			inputForm.classList.add("hidden");
+		}
 	}
 });
 
@@ -66,6 +74,20 @@ continueBtn.addEventListener("click", () => {
 	if (completedPage) {
 		completed.classList.add("hidden");
 		inputForm.classList.remove("hidden");
+
+		nameInputVal = "jane appleseed";
+		numInputVal = `0000 0000 0000 0000`;
+		dMonInputVal = "00";
+		dYrInputVal = "00";
+		cvvInputVal = "000";
+
+		nameInput.value = "";
+		numInput.value = "";
+		cvvInput.value = "";
+		dMonInput.value = "";
+		dYrInput.value = "";
+
+		displayItems();
 	}
 });
 
@@ -91,8 +113,13 @@ nameInput.addEventListener("keyup", () => {
 cardNum.textContent = numInputVal;
 
 numInput.addEventListener("keyup", () => {
-	numInputVal = numInput.value;
-	cardNum.textContent = numInputVal;
+	if (numInput.value === "") {
+		numInputVal = `0000 0000 0000 0000`;
+		cardNum.textContent = numInputVal;
+	} else {
+		numInputVal = numInput.value;
+		cardNum.textContent = numInputVal;
+	}
 });
 
 // ! CARD NUMBER
@@ -198,3 +225,16 @@ function checkForErr() {
 }
 
 // ! CHECK FOR ERR
+
+// ! DISPLAY EV
+const displayItems = () => {
+	cardName.textContent = nameInputVal;
+
+	cardNum.textContent = numInputVal;
+
+	expMon.textContent = dMonInputVal;
+
+	expYr.textContent = dYrInputVal;
+	cardCvv.textContent = cvvInputVal;
+};
+// ! DISPLAY EV
